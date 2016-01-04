@@ -1,6 +1,8 @@
 #Connecting Android apps to Dynamics CRM using SOAP endpoint
 
-Non .Net clients can access Microsoft Dynamics CRM business data using SOAP end point or Web API. In this tutorial we will learn how to perform SOAP authentication to Microsoft Dynamics CRM from Android. We have made a sample application which sends WhoAmIRequest and CRM responds back with the logged in name.
+Non .Net clients can access Microsoft Dynamics CRM business data using SOAP end point or Web API. 
+We have made a sample application which sends WhoAmIRequest and CRM responds back with the logged in name. 
+This app connects with Dynamics CRM Online only.
 
 --------
 
@@ -58,11 +60,13 @@ public class CRMAuthHeader {
 
 ##SOAPBodies
 
-This class holds the SOAP bodies which is used in SOAP request inside SOAP Envelope as it contains the query that do some action(Create, Update, Delete and Retrieve etc.).
+This class holds the SOAP bodies which is used in SOAP request inside SOAP Envelope as it contains the query that do some 
+action(Create, Update, Delete and Retrieve etc.).
 
 ##CRMAuthuthenticationTask
 
-This class simply make network call to authenticate the user with help of Authentication envelop from **CRMAuth** class and pass it to **ServiceHandler** class. This class takes these three parameters:
+This class simply make network call to authenticate the user with help of Authentication envelop from **CRMAuth** class and pass 
+it to **ServiceHandler** class. This class takes these three parameters:
  
  1. Organization URL
  2. Username
