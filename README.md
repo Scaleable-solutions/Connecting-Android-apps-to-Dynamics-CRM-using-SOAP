@@ -12,7 +12,7 @@ This class is responsible to retrieve data from network request in this app.
 
 ##LocalStorage
 
-It is a simple implemention of **SharedPreference** to store SOAP Header and Expire time.
+It is a simple implementation of **SharedPreference** to store SOAP Header and Expire time.
 
 ##CRMAuth
 
@@ -56,3 +56,30 @@ public class CRMAuthHeader {
 }
 ```
 
+##SOAPBodies
+
+This class holds the SOAP bodies which is used in SOAP request inside SOAP Envelope as it contains the query that do some action(Create, Update, Delete and Retrieve etc.).
+
+##CRMAuthuthenticationTask
+
+This class simply make network call to authenticate the user with help of Authentication envelop from **CRMAuth** class and pass it to **ServiceHandler** class. This class takes these three parameters:
+ 
+ 1. Organization URL
+ 2. Username
+ 3. Password
+ 
+And return **CRMAuthHeader** object.
+
+##WhoAmITask
+
+This class takes CRM SOAP Header and URL and returns User Id.
+
+##UserInfoTask
+
+This class takes CRM SOAP Header, URL and User Id and reruns logged in Name
+
+-------
+
+#Conclusion
+
+The given sample is great starter app to perform authentication in Android apps. It gives a good overview of how you can make connection with CRM in external apps not developed in .NET. You can freely use this sample in your apps for authentication purposes.
