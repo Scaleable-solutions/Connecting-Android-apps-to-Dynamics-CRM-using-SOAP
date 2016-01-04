@@ -12,7 +12,7 @@ This class is responsible to retrieve data from network request in this app.
 
 ##LocalStorage
 
-It is a simple implementation of **SharedPreference** to store SOAP Header and Expire time.
+It is a simple implementation of **SharedPreference** to store Organizational URL, SOAP Header and Expire time.
 
 ##CRMAuth
 
