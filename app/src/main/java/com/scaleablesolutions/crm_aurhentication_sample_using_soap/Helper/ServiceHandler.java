@@ -1,9 +1,6 @@
 package com.scaleablesolutions.crm_aurhentication_sample_using_soap.Helper;
 
-import android.util.Log;
-
 import com.scaleablesolutions.crm_aurhentication_sample_using_soap.CRM.CRMAuth;
-import com.scaleablesolutions.crm_aurhentication_sample_using_soap.CRM.SOAPBodies;
 import com.scaleablesolutions.crm_aurhentication_sample_using_soap.CRM.CRMAuthHeader;
 
 import org.w3c.dom.Document;
@@ -81,10 +78,9 @@ public class ServiceHandler {
         return authHeader;
     }
 
-    public String getUserId(String url, String header) {
+    public String getUserId(String url, String header,String body) {
 
         String completeURL = url + "/XRMServices/2011/Organization.svc";
-        String body = SOAPBodies.WhoAmIBody();
 
         StringBuilder xml = new StringBuilder();
         xml.append("<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:a=\"http://www.w3.org/2005/08/addressing\">");
@@ -121,9 +117,8 @@ public class ServiceHandler {
         return "";
     }
 
-    public String getUserInfo(String url, String header, String id) {
+    public String getUserInfo(String url, String header,String body) {
         String completeURL = url + "/XRMServices/2011/Organization.svc";
-        String body = SOAPBodies.UserInfoBody(id);
 
         StringBuilder xml = new StringBuilder();
         xml.append("<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:a=\"http://www.w3.org/2005/08/addressing\">");
